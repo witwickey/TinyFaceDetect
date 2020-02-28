@@ -13,7 +13,9 @@ For installing Darknet framework, you can refer to [darknet(pjreddie)](https://g
 
 ## Dataset
 ### Download and extract Wider Face dataset, formatted to darknet style
-Download link can be found here: https://drive.google.com/drive/folders/1D_fP2pzg7PIt1mC2cZDwLvAXqCDzuTWl?usp=sharing
+Download link can be found here:
+Training set: https://drive.google.com/open?id=1CDVIP8m_5_gbHSrwAmi6NZ1VbJDyEQrQ
+Validation set: https://drive.google.com/open?id=1i3aY0BpWsjvBWis5zALQUzJgRlBxWzgf
 
 
 ## Usage
@@ -23,29 +25,30 @@ Download link can be found here: https://drive.google.com/drive/folders/1D_fP2pz
 $ git clone https://github.com/witwickey/TinyFaceDetect.git
 ```
 
-* Use the pre-trained weights for the convolutional layers 'yolov3-tiny.conv.11' placed in `model-weights/` directory for training.
-* Use the trained weights 'yolov3-tiny-prn.weights' placed in `model-weights/` directory for inferencing.
+* Use the pre-trained weights for the convolutional layers 'yolov3-tiny.conv.11' training. Download from https://drive.google.com/open?id=1E-cmVrVf3yZPEcnLCbwf35nXhSAaaGWd
+	
+* Use the trained weights 'yolov3-tiny-prn.weights' placed in `weights/` directory for inferencing. Download from https://drive.google.com/open?id=1GVZ5PahAHMTkBkMrubgUPjggst_Z57ks
 
 * Run the following command:
 
 >**image input**
 ```bash
-$ darknet.exe detector test facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\model-weights\yolov3-tiny-prn_last.weights -ext_output facedect\samples\einstein_and_others.jpg
+$ darknet.exe detector test facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\weights\yolov3-tiny-prn_last.weights -ext_output facedect\samples\einstein_and_others.jpg
 ```
 
 >**video input**
 ```bash
-$ darknet.exe detector test facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\model-weights\yolov3-tiny-prn_last.weights -i 0 -ext_output input.mp4
+$ darknet.exe detector test facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\weights\yolov3-tiny-prn_last.weights -i 0 -ext_output input.mp4
 ```
 
 >**webcam**
 ```bash
-$ darknet.exe detector demo facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\model-weights\yolov3-tiny-prn_last.weights -c 0
+$ darknet.exe detector demo facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\weights\yolov3-tiny-prn_last.weights -c 0
 ```
 
 >**training**
 ```bash
-$ darknet.exe detector train facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\model-weights\yolov3-tiny.conv.11
+$ darknet.exe detector train facedetect\cfg\face.data facedetect\cfg\yolov3-tiny-prn.cfg facedetect\weights\yolov3-tiny.conv.11
 ```
 
 ## Sample outputs
