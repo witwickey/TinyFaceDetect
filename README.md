@@ -7,13 +7,12 @@
 The YOLOv3 (You Only Look Once) is a state-of-the-art, real-time object detection algorithm. The published model recognizes 80 different objects in images and videos. For more details, you can refer to this [paper](https://pjreddie.com/media/files/papers/YOLOv3.pdf).
 
 ## Partial Residual Networks
-PRN: [paper](https://github.com/WongKinYiu/PartialResidualNetworks/blob/master/pdf/iccvw-prn.pdf) will be appear in [2019 ICCV Workshop on Low-Power Computer Vision](https://rebootingcomputing.ieee.org/lpirc).
+PRN [paper](https://github.com/WongKinYiu/PartialResidualNetworks/blob/master/pdf/iccvw-prn.pdf) appeared in [2019 ICCV Workshop on Low-Power Computer Vision](https://rebootingcomputing.ieee.org/lpirc).
 
 For installing Darknet framework, you can refer to [darknet(pjreddie)](https://github.com/pjreddie/darknet) or [darknet(AlexeyAB)](https://github.com/AlexeyAB/darknet).
 
 ## Dataset
 ### Download and extract Wider Face dataset, formatted to darknet style
-Download link can be found here:
 Training set: https://drive.google.com/open?id=1CDVIP8m_5_gbHSrwAmi6NZ1VbJDyEQrQ
 Validation set: https://drive.google.com/open?id=1i3aY0BpWsjvBWis5zALQUzJgRlBxWzgf
 
@@ -25,7 +24,7 @@ Validation set: https://drive.google.com/open?id=1i3aY0BpWsjvBWis5zALQUzJgRlBxWz
 $ git clone https://github.com/witwickey/TinyFaceDetect.git
 ```
 
-* Use the pre-trained weights for the convolutional layers 'yolov3-tiny.conv.11' training. Download from https://drive.google.com/open?id=1E-cmVrVf3yZPEcnLCbwf35nXhSAaaGWd
+* Use the pre-trained weights for the convolutional layers 'yolov3-tiny.conv.11' placed in `weights/` directory for training. Download from https://drive.google.com/open?id=1E-cmVrVf3yZPEcnLCbwf35nXhSAaaGWd
 	
 * Use the trained weights 'yolov3-tiny-prn.weights' placed in `weights/` directory for inferencing. Download from https://drive.google.com/open?id=1GVZ5PahAHMTkBkMrubgUPjggst_Z57ks
 
