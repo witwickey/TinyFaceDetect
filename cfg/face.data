@@ -1,0 +1,6 @@
+classes= 1
+train  = facedetect/cfg/train.txt
+valid  = facedetect/cfg/val.txt
+names = facedetect/cfg/face.names
+backup = backup/
+
